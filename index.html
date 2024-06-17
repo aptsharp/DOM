@@ -18,5 +18,73 @@
     } else {
         alert('false');
     }
+//elementos com HTML, exemplos
+
+var element = document.getElementById('myElement'); //POR ID
+
+var elements = document.getElementsByClassName('myClass'); //POR CLASSE 
+
+var elements = document.getElementsByTagName('div'); // POR NOME DA TAG
+
+//POR QUERY SELECTORS:
+
+var element = document.querySelector('.myClass'); // Seleciona o primeiro elemento com a classe 'myClass'
+var elements = document.querySelectorAll('.myClass'); // Seleciona todos os elementos com a classe 'myClass'
+
+//Modificação de Conteúdo - o DOM permite modificação de conteudo.
+// quando selecionar um conteudo pode modificar o elemento dele. 
+
+element.textContent = 'Novo texto'; //ALTERAR TEXTOS
+
+element.innerHTML = '<p>Novo conteúdo HTML</p>';//Alterar HTML
+
+element.setAttribute('src', 'nova-imagem.jpg'); //Alterar Atributos
+
+//Alterar Estilos
+element.style.color = 'red';
+element.style.fontSize = '20px';
+
+// o DOM tambem permite a criação e inserção de elementos
+// nesse caso o DOM permite.
+
+//Criar um Novo Elemento
+var newElement = document.createElement('div');
+newElement.textContent = 'Novo elemento';
+
+//Inserir um Elemento no DOM
+var parent = document.getElementById('parentElement');
+parent.appendChild(newElement); // Insere como último filho
+
+// Insere antes de um elemento específico
+var referenceElement = document.getElementById('referenceElement');
+parent.insertBefore(newElement, referenceElement);
+
+//Remoção de Elementos
+
+//Remover um Elemento
+var elementToRemove = document.getElementById('elementToRemove');
+elementToRemove.remove();
+
+//Remover um Filho
+var parent = document.getElementById('parentElement');
+var child = document.getElementById('childElement');
+parent.removeChild(child);
+
+//Eventos
+
+//Adicionar um Evento
+element.addEventListener('click', function() {
+    alert('Elemento clicado!');
+});
+
+//Remover um Evento
+var handleClick = function() {
+    alert('Elemento clicado!');
+};
+
+element.addEventListener('click', handleClick);
+element.removeEventListener('click', handleClick);
+
+
 </script>
 </html>
