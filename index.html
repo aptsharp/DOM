@@ -85,6 +85,46 @@ var handleClick = function() {
 element.addEventListener('click', handleClick);
 element.removeEventListener('click', handleClick);
 
+//O DOM tambem oferece manipulação de "API's de Armazenametno e serviçõs em segundo plano" no contexto de desenvolvimento web (gerencia de dados e operações).
+//A manipulação do DOM lida diretamente com a estrutura do documento HTML e as representaçãoes em arvores no navegador
+
+//Exemplos de uso de localStorage - Service Worker
+
+//Armazenamento Local
+// Armazenar um valor
+localStorage.setItem('username', 'JohnDoe');
+
+// Recuperar um valor
+var username = localStorage.getItem('username');
+
+// Remover um valor
+localStorage.removeItem('username');
+
+
+//Service Worker (registro e instalação)
+// Registrar um Service Worker
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+    console.log('Service Worker registrado com sucesso:', registration);
+  }).catch(function(error) {
+    console.log('Falha ao registrar o Service Worker:', error);
+  });
+}
+
+// No arquivo service-worker.js
+self.addEventListener('install', function(event) {
+  console.log('Service Worker instalado');
+});
+
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.match(event.request).then(function(response) {
+      return response || fetch(event.request);
+    })
+  );
+});
+
+
 
 </script>
 </html>
