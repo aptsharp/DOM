@@ -56,9 +56,9 @@ Manipular o DOM em sistemas legados como o Internet Explorer pode ser desafiador
 * Evitar métodos modernos: Alguns métodos modernos, como querySelector e addEventListener, podem não ser totalmente suportados em versões mais antigas do IE. Utilize alternativas mais antigas, como getElementById, attachEvent, etc.
 * Testes: Realizar testes extensivos em diferentes versões do IE para garantir compatibilidade.
 
-#### 🕵🏻‍♂️Todas essas praticas ajudam com que o DOM seja manipulado de maneira mais assertiva, a manipulação do DOM tambem depende de contextos de ambientes como o uso do Edge e do IE ( legado ), tambem em sistemas legados podem ser usados o jQuery para manipulação do DOM.
+#### 🕵🏻‍♂️Todas essas praticas ajudam com que o DOM seja manipulado de maneira mais assertiva, a manipulação do DOM também depende de contextos de ambientes como o uso do Edge e do IE ( legado ), também em sistemas legados podem ser usados o jQuery para manipulação do DOM.
 
-#### 🧙🏻Nesse repositorio foi somente uma contetualização de como o DOM funcina e as suas peculiaridades, o assunto é bem mais extenso do que apenas os codigos que esse repositorio tem. 
+#### 🧙🏻Nesse repositório foi somente uma contextualização de como o DOM funciona e as suas peculiaridades, o assunto é bem mais extenso do que apenas os códigos que esse repositório tem.                                
 
 
 -enjoy!
